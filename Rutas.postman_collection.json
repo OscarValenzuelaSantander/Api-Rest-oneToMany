@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "9161e66d-a3c7-4a94-9923-cd3a44a8e424",
+		"name": "Rutas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33687180"
+	},
+	"item": [
+		{
+			"name": "Listar Compositores",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Canciones",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Compositor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Daniel\",\r\n    \"fecha\": \"2024-03-16\",\r\n    \"solicitudInscripcion\": false,\r\n    \"celular\": 987654321,\r\n    \"precioInscripcion\": 150.75,\r\n    \"cancion\": \r\n            [\r\n                {  \r\n         \"titulo\": \"Todo\",\r\n         \"fechaCreacion\": \"2000-03-16\",\r\n         \"estadoInscripcion\": false,\r\n         \"precioInscripcionClp\": 1000000000,\r\n          \"precioInscripcionUsd\": 30.0\r\n               },\r\n               {  \r\n          \"titulo\": \"Ahora sí\",\r\n          \"fechaCreacion\": \"2000-03-16\",\r\n          \"estadoInscripcion\": false,\r\n          \"precioInscripcionClp\": 1000000000,\r\n          \"precioInscripcionUsd\": 30.0\r\n               } \r\n            ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/scd-app/agregar/compositor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"scd-app",
+						"agregar",
+						"compositor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Canción",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n       \r\n        \"titulo\": \"Todo\",\r\n        \"fechaCreacion\": \"2000-10-10\",\r\n        \"estadoInscripcion\": false,\r\n        \"precioInscripcionClp\": 1000000000,\r\n        \"precioInscripcionUsd\": 30.0\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/scd-app/agregar/cancion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"scd-app",
+						"agregar",
+						"cancion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Compositor (id)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/scd-app/buscar/compositor/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"scd-app",
+						"buscar",
+						"compositor",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Canción (id)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/scd-app/buscar/cancion/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"scd-app",
+						"buscar",
+						"cancion",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Compositor (id)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nombre\": \"Felipe\",\r\n        \"fecha\": \"2024-03-16\",\r\n        \"solicitudInscripcion\": false,\r\n        \"celular\": 987654321,\r\n        \"precioInscripcion\": 150.75\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/scd-app/editar/compositor/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"scd-app",
+						"editar",
+						"compositor",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Canción (id)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\": \"Todo\",\r\n    \"fechaCreacion\": \"2024-03-14\",\r\n    \"estadoInscripcion\": false,\r\n    \"precioInscripcionClp\": 1000000000,\r\n    \"precioInscripcionUsd\": 30.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/scd-app/editar/cancion/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"scd-app",
+						"editar",
+						"cancion",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Compositor (id)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/scd-app/eliminar/compositor/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"scd-app",
+						"eliminar",
+						"compositor",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Canción (id)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/scd-app/eliminar/cancion/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"scd-app",
+						"eliminar",
+						"cancion",
+						"12"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
